@@ -17,7 +17,7 @@ This activity helps build a dynamic "To-Do List Filter" based on different crite
 // ============================================
 // 🚀 Starting Point: To-Do List Array
 // ============================================
-
+/*
 const todos = [
     { task: "Wash the dishes", completed: false, priority: 3 },
     { task: "Write a blog post", completed: true, priority: 1 },
@@ -25,7 +25,13 @@ const todos = [
     { task: "Study JavaScript", completed: true, priority: 1 },
     { task: "Walk the dog", completed: false, priority: 2 },
   ];
-  
+
+ let checker = function() {
+    let incomplete = todos.filter(todo => !todo.completed);
+    console.log("Incomplete tasks: ", incomplete);
+  };
+checker();
+  */
   // ============================================
   // 🔍 Tasks
   // ============================================
@@ -48,7 +54,25 @@ const todos = [
   2. Use an anonymous function as the comparison function.
   3. Sort tasks in ascending order of priority (1 = highest).
   */
-  
+ /*
+  const todos = [
+    { task: "Wash the dishes", completed: false, priority: 3 },
+    { task: "Write a blog post", completed: true, priority: 1 },
+    { task: "Buy groceries", completed: false, priority: 2 },
+    { task: "Study JavaScript", completed: true, priority: 1 },
+    { task: "Walk the dog", completed: false, priority: 2 },
+  ];
+
+  let sorted = function() {
+    let priority = todos.sort((a, b) => a.priority - b.priority);
+    console.log("Sorted by priority", priority);
+  };
+  sorted();
+  */
+  /*
+ 
+  */
+
   
   /*
   🔹 Task 3: Mark All Tasks as Completed
@@ -58,7 +82,23 @@ const todos = [
   2. Use an anonymous function to modify each object.
   3. Change the `completed` property to `true` for every task.
   */
-  
+/*
+  const todos = [
+    { task: "Wash the dishes", completed: false, priority: 3 },
+    { task: "Write a blog post", completed: true, priority: 1 },
+    { task: "Buy groceries", completed: false, priority: 2 },
+    { task: "Study JavaScript", completed: true, priority: 1 },
+    { task: "Walk the dog", completed: false, priority: 2 },
+  ];
+
+  let newArray = function() {
+    let completed = todos.map(change => {
+      return { ...change, completed: true};
+    });
+    console.log("All complete", completed);
+  };
+  newArray();
+  */
   
   /*
   🔹 Task 4: Combine Filters
@@ -68,7 +108,22 @@ const todos = [
   2. Then, sort the filtered results by priority using `sort()`.
   3. Use method chaining to perform both steps together.
   */
+  const todos = [
+    { task: "Wash the dishes", completed: false, priority: 3 },
+    { task: "Write a blog post", completed: true, priority: 1 },
+    { task: "Buy groceries", completed: false, priority: 2 },
+    { task: "Study JavaScript", completed: true, priority: 1 },
+    { task: "Walk the dog", completed: false, priority: 2 },
+  ];
+
+  let newArray = function() {
+    let completed = todos.filter(onlyIncomplete => !onlyIncomplete.completed)
+    .sort((a, b) => a.priority - b.priority);
+    console.log("All complete", completed);
+    };
+   
   
+  newArray();
   
   // ============================================
   // 🧪 Console Test Your Work
